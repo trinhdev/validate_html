@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <form class="form">
+        <div class="field">
+          <label class="field__label" for="name">Your name</label>
+          <input
+            class="field__item"
+            id="name"
+            name="name"
+            type="text"
+            required
+            minlength="5"
+          />
+          <span class="field__err"
+            >Your name must be at least 5 characters</span
+          >
+        </div>
+        <div class="field">
+          <label class="field__label" for="email">Your email</label>
+          <input
+            class="field__item"
+            id="email"
+            name="email"
+            type="email"
+            required
+          />
+          <span class="field__err">Please enter a valid email</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="phone">Phone number</label>
+          <input
+            class="field__item"
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            minlength="10"
+            pattern="[0-9]+"
+          />
+          <span class="field__err">Please only use numbers</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="website">Your website</label>
+          <input
+            class="field__item"
+            id="website"
+            name="website"
+            type="text"
+            required
+            pattern="^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$"
+          />
+          <span class="field__err">Please enter a valid website</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="message">Message</label>
+          <textarea
+            class="field__item"
+            id="message"
+            name="message"
+            required
+          ></textarea>
+          <span class="field__err">Please enter a message</span>
+        </div>
+        <button class="btn" type="submit">Contact us</button>
+      </form>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
